@@ -4,7 +4,7 @@ import PhotoListItem from './components/PhotoListItem';
 import PhotoList from 'components/PhotoList';
 import TopicListItem from 'components/TopicListItem';
 import TopicList from 'components/TopicList';
-import HomeRoute from 'components/HomeRoute';
+import HomeRoute from 'routes/HomeRoute';
 import './App.scss';
 import TopNavigationBar from 'components/TopNavigationBar';
 
