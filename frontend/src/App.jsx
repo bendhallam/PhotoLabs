@@ -5,13 +5,14 @@ import PhotoList from 'components/PhotoList';
 import TopicListItem from 'components/TopicListItem';
 import TopicList from 'components/TopicList';
 import './App.scss';
+import TopNavigationBar from 'components/TopNavigationBar';
 
 
 // Note: Rendering a single component to build components in isolation
 const App = () => {
   return (
     <div className="App">
-      <TopicList />
+      <TopNavigationBar />
       <PhotoList />
     </div>
   );
