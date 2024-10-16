@@ -4,15 +4,18 @@ import '../styles/HomeRoute.scss';
 import TopNavigationBar from 'components/TopNavigationBar';
 import PhotoList from 'components/PhotoList';
 
-const HomeRoute = ({photos, topics, favouritedPhotos}) => {
+const HomeRoute = ({photos, topics, favouritedPhotos, addOrRemoveFavourite}) => {
   return (
     <div className="home-route">
       <TopNavigationBar 
         topics={topics}
-        favouritedPhotos={favouritedPhotos}/>
+        favouritedPhotos={favouritedPhotos}
+      />
       <PhotoList 
         photos={photos}
-        favouritedPhotos={favouritedPhotos}/>
+        favouritedPhotos={favouritedPhotos}
+        addOrRemoveFavourite={addOrRemoveFavourite}
+      />
     </div>
   );
 };
