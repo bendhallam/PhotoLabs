@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from "react";
 
 
 import HomeRoute from 'routes/HomeRoute';
@@ -9,11 +9,13 @@ import topics from 'mocks/topics';
 
 // Note: Rendering a single component to build components in isolation
 const App = () => {
+  const [favouritedPhotos, setFavouritePhotos] = useState([]);
   return (
     <div className="App">
       <HomeRoute 
       photos={photos}
-      topics={topics}/>
+      topics={topics}
+      favouritedPhotos={favouritedPhotos}/>
     </div>
   );
 };
