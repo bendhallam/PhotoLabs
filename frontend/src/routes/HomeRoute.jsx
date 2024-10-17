@@ -6,7 +6,7 @@ import TopNavigationBar from 'components/TopNavigationBar';
 import PhotoList from 'components/PhotoList';
 import PhotoDetailsModal from './PhotoDetailsModal';
 
-const HomeRoute = ({photos, topics, favouritedPhotos, addOrRemoveFavourite, onPhotoClick}) => {
+const HomeRoute = ({photos, topics, favouritedPhotos, addOrRemoveFavourite, handlePhotoSelect}) => {
   return (
     <div className="home-route">
       <TopNavigationBar 
@@ -17,7 +17,7 @@ const HomeRoute = ({photos, topics, favouritedPhotos, addOrRemoveFavourite, onPh
         photos={photos}
         favouritedPhotos={favouritedPhotos}
         addOrRemoveFavourite={addOrRemoveFavourite}
-        onPhotoClick={onPhotoClick}
+        handlePhotoSelect={handlePhotoSelect}
       />
     </div>
   );
