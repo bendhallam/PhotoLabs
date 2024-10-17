@@ -4,6 +4,7 @@ import HomeRoute from 'routes/HomeRoute';
 import './App.scss';
 import photos from 'mocks/photos';
 import topics from 'mocks/topics';
+import PhotoDetailsModal from "routes/PhotoDetailsModal";
 
 
 // Note: Rendering a single component to build components in isolation
@@ -16,10 +17,21 @@ const App = () => {
       if (prevFavourites.includes(photoId)) {
         return prevFavourites.filter(id => id !== photoId);
       } else {
-        return [...prevFavourites, photoId]
+        return [...prevFavourites, photoId];
       }
     });
   };
+
+
+  // Set modal open or close state (ie. check if photo is selected or not)
+  const [selectedPhoto, setSelectedPhoto] = useState(null);
+  // Handle selecting photo
+  const handlePhotoClick = (photoId) => {
+    setSelectedPhoto(photoId);// Set the selected photo and open modal
+  }
+  const closeModal = () => {
+    setSelectedPhoto(null); // Clear selected photo and close modal
+  }
 
   return (
     <div className="App">
@@ -27,7 +39,10 @@ const App = () => {
       photos={photos}
       topics={topics}
       favouritedPhotos={favouritedPhotos}
-      addOrRemoveFavourite={addOrRemoveFavourite}/>
+      addOrRemoveFavourite={addOrRemoveFavourite} // Pass the favourite/unfavourite handler
+      onPhotoClick={handlePhotoClick} // Pass the photo click handler
+      />
+      {selectedPhoto && <PhotoDetailsModal photoId={selectedPhoto} onClose={closeModal} />} {/*Render modal if photo is selected*/}
     </div>
   );
 };
