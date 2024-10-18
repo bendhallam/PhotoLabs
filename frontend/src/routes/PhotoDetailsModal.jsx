@@ -2,9 +2,9 @@ import React from 'react';
 
 import '../styles/PhotoDetailsModal.scss'
 import closeSymbol from '../assets/closeSymbol.svg';
+import PhotoList from 'components/PhotoList';
 
 const PhotoDetailsModal = ({photo, onClose}) => {
-  console.log(photo)
   return (
     <div className="photo-details-modal">
     <div className="photo-details-modal__top-bar">
@@ -29,12 +29,7 @@ const PhotoDetailsModal = ({photo, onClose}) => {
           {`${photo.location.city}, ${photo.location.country}`}
         </p>
       </div>
-      <div className="photo-details-modal__images">
-        <img src={photo.similar_photos.photo2.urls.regular} />
-        <img src={photo.similar_photos.photo3.urls.regular} />
-        <img src={photo.similar_photos.photo4.urls.regular} />
-        <img src={photo.similar_photos.photo5.urls.regular} />
-      </div>
+      <PhotoList photos={photo.similar_photos} />
     </div>
   </div>
   )
