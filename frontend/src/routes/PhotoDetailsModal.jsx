@@ -4,7 +4,7 @@ import '../styles/PhotoDetailsModal.scss'
 import closeSymbol from '../assets/closeSymbol.svg';
 import PhotoList from 'components/PhotoList';
 
-const PhotoDetailsModal = ({photo, onClose}) => {
+const PhotoDetailsModal = ({photo, onClose, favouritedPhotos, addOrRemoveFavourite}) => {
   return (
     <div className="photo-details-modal">
     <div className="photo-details-modal__top-bar">
@@ -35,7 +35,11 @@ const PhotoDetailsModal = ({photo, onClose}) => {
     
   <div className="photo-details-modal__images">
       <h3 className="photo-details-modal__header">Similar Photos</h3>
-      <PhotoList photos={photo.similar_photos} />
+      <PhotoList 
+        photos={photo.similar_photos} 
+        favouritedPhotos={favouritedPhotos}
+        addOrRemoveFavourite={addOrRemoveFavourite} // Pass the favourite/unfavourite handler
+        />
       </div>
   </div>
   )

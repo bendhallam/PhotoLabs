@@ -45,6 +45,8 @@ const App = () => {
       {selectedPhoto && <PhotoDetailsModal 
         photo={selectedPhoto} 
         onClose={closeModal} 
+        favouritedPhotos={favouritedPhotos}
+        addOrRemoveFavourite={addOrRemoveFavourite} // Pass the favourite/unfavourite handler
         />} {/*Render modal if photo is selected*/}
     </div>
   );
