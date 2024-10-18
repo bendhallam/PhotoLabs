@@ -26,8 +26,8 @@ const App = () => {
   // Set modal open or close state (ie. check if photo is selected or not)
   const [selectedPhoto, setSelectedPhoto] = useState(null);
   // Handle selecting photo
-  const handlePhotoSelect = (photoId) => {
-    setSelectedPhoto(photoId);// Set the selected photo and open modal
+  const handlePhotoSelect = (photo) => {
+    setSelectedPhoto(photo);// Set the selected photo and open modal
   }
   const closeModal = () => {
     setSelectedPhoto(null); // Clear selected photo and close modal
@@ -42,7 +42,10 @@ const App = () => {
       addOrRemoveFavourite={addOrRemoveFavourite} // Pass the favourite/unfavourite handler
       handlePhotoSelect={handlePhotoSelect} // Pass the photo click handler
       />
-      {selectedPhoto && <PhotoDetailsModal photoId={selectedPhoto} onClose={closeModal} />} {/*Render modal if photo is selected*/}
+      {selectedPhoto && <PhotoDetailsModal 
+        photo={selectedPhoto} 
+        onClose={closeModal} 
+        />} {/*Render modal if photo is selected*/}
     </div>
   );
 };

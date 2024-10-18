@@ -11,9 +11,9 @@ const PhotoListItem = ({ photoId, username, imageSource, location, profile, addO
   };
 
   return (
-    <div className="photo-list__item" onClick={handlePhotoSelect}>
+    <div className="photo-list__item">
       <PhotoFavButton isSelected={isFavorited} onToggle={toggleFavorite} />
-      <img src={imageSource} alt={`Photo by ${username}`} className="photo-list__image" />
+      <img src={imageSource} alt={`Photo by ${username}`} className="photo-list__image"  onClick={handlePhotoSelect} />
       <div className="photo-list__user-details">
         <img src={profile} alt={`${username}'s profile`} className="photo-list__user-profile" />
         <div className="photo-list__user-info">

@@ -17,7 +17,7 @@ const PhotoList = ({photos, favouritedPhotos, addOrRemoveFavourite, handlePhotoS
             profile={photo.user.profile}
             favouritedPhotos={favouritedPhotos}
             addOrRemoveFavourite={addOrRemoveFavourite}
-            handlePhotoSelect={() => handlePhotoSelect(photo.id)} // Handle photo click
+            handlePhotoSelect={() => handlePhotoSelect(photo)} // Handle photo click
           />
       ))}
     </ul>
