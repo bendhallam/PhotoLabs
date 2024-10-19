@@ -1,9 +1,8 @@
 import React from "react";
-import TopicListItem from './TopicListItem';
 import "../styles/TopicList.scss";
+import "../styles/TopicListItem.scss";
 
 const TopicList = ({topics, onTopicSelect}) => {
-  console.log(topics); // Add this to debug
   return (
     <div className="top-nav-bar__topic-list">
       {topics.map(topic => (
