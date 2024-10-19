@@ -3,7 +3,6 @@ import React, { useState } from "react";
 import useApplicationData from "./hooks/useApplicationData";
 import HomeRoute from 'routes/HomeRoute';
 import './App.scss';
-import topics from 'mocks/topics';
 import PhotoDetailsModal from "routes/PhotoDetailsModal";
 
 
