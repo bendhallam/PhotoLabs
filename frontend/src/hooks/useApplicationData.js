@@ -72,6 +72,18 @@ const useApplicationData = () => {
     dispatch({ type: 'CLOSE_MODAL' });
   };
 
+  const fetchPhotosByTopic = (topicId) => {
+    fetch(`http://localhost:8001/api/topics/photos/${topicId}`)
+      .then((response) => response.json())
+      .then((data) => dispatch({ type: 'SET_PHOTO_DATA', payload: data }));
+  };
+  
+  // New action for topic selection
+  const selectTopic = (topicId) => {
+    fetchPhotosByTopic(topicId);
+  };
+
+
   useEffect(() => {
     fetch("/api/photos")
       .then((response) => response.json())
@@ -89,7 +101,8 @@ const useApplicationData = () => {
     addOrRemoveFavourite,
     handlePhotoSelect,
     closeModal,
-    setFavouritedPhotos, // Expose setFavouritedPhotos if needed
+    setFavouritedPhotos, 
+    selectTopic
   };
 };
 

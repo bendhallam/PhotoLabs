@@ -12,7 +12,8 @@ const App = () => {
     state,
     addOrRemoveFavourite,
     handlePhotoSelect,
-    closeModal
+    closeModal,
+    selectTopic
   } = useApplicationData();
 
   return (
@@ -23,6 +24,7 @@ const App = () => {
       favouritedPhotos={state.favouritedPhotos}
       addOrRemoveFavourite={addOrRemoveFavourite} // Pass the favourite/unfavourite handler
       handlePhotoSelect={handlePhotoSelect} // Pass the photo click handler
+      onTopicSelect={selectTopic}
       />
       {state.selectedPhoto && <PhotoDetailsModal 
         photo={state.selectedPhoto} 
