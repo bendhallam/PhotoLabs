@@ -8,13 +8,15 @@
   -moz-box-shadow: 0 4px 6px -6px #222;
   box-shadow: 0 4px 6px -6px #222;
   height: 72px;
+  font-weight: 600;
+  color: #333;
 }
 
 .top-nav-bar__logo {
   text-decoration: overline;
-  font-weight: 500;
+  font-weight: 600; /* Increase font weight for more impact */
   font-size: 24px;
-  color: #111;
+  color: #333; /* Off-black color */
   text-underline-position: auto;
   margin-left: 24px;
 }

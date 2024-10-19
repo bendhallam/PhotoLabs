@@ -2,12 +2,12 @@ const topics = [
   {
     "id": "1",
     "slug": "topic-1",
-    "title": "Nature"
+    "title": "Explore"
   },  
   {
     "id": "2",
     "slug": "topic-2",
-    "title": "Travel"
+    "title": "Nature"
   },
   {
     "id": "3",
@@ -17,12 +17,7 @@ const topics = [
   {
     "id": "4",
     "slug": "topic-4",
-    "title": "Fashion"
-  },  
-  {
-    "id": "5",
-    "slug": "topic-5",
-    "title": "Animals"
+    "title": "Food & Drink"
   }
 ];
 
