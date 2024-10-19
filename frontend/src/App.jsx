@@ -3,7 +3,6 @@ import React, { useState } from "react";
 import useApplicationData from "./hooks/useApplicationData";
 import HomeRoute from 'routes/HomeRoute';
 import './App.scss';
-import photos from 'mocks/photos';
 import topics from 'mocks/topics';
 import PhotoDetailsModal from "routes/PhotoDetailsModal";
 
@@ -20,8 +19,8 @@ const App = () => {
   return (
     <div className="App">
       <HomeRoute 
-      photos={photos}
-      topics={topics}
+      photos={state.photoData}
+      topics={state.topicData}
       favouritedPhotos={state.favouritedPhotos}
       addOrRemoveFavourite={addOrRemoveFavourite} // Pass the favourite/unfavourite handler
       handlePhotoSelect={handlePhotoSelect} // Pass the photo click handler
