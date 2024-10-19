@@ -3,6 +3,11 @@ The PhotoLabs project for the Web Development React course programming.
 
 # Photolabs
 
+## Screenshots
+!["Main Screen"](https://github.com/bendhallam/PhotoLabs/blob/main/docs/main_screen.png)
+!["Similar Photos"](https://github.com/bendhallam/PhotoLabs/blob/main/docs/similar_photos.png)
+
+
 ## Setup
 
 Install dependencies with `npm install` in each respective `/frontend` and `/backend`.
